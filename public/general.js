@@ -247,6 +247,7 @@ return function() {
 function hasUserComment(postId, userComments) {
 return userComments.some(comment => comment.PostId.toString() === postId.toString());
 }
+<<<<<<< HEAD
 
 function voteCount(postId, toAdd){
 // var updatedVoteCount = document.getElementById("num_vote").value;
@@ -269,6 +270,30 @@ fetch('/vote', {
 .catch(error => {
   console.error('Error saving changes:', error);
  
+=======
+  
+function voteCount(postId, toAdd){
+  // var updatedVoteCount = document.getElementById("num_vote").value;
+ 
+  // Send a POST request to update the post data
+  fetch('/vote', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({postId, toAdd})
+})
+.then(response => {
+    if (response.ok) {
+    } else {
+        console.error('Failed to save changes:', response.statusText);
+        
+    }
+})
+.catch(error => {
+    console.error('Error saving changes:', error);
+   
+>>>>>>> 694b33e971505caf0876498f1dc5ac2a50f9d880
 });
 }
 
