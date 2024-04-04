@@ -140,7 +140,7 @@
                 .then(response => {
                     if (response.ok) {
                         // If deletion is successful, reload the page or handle it appropriately
-                        location.reload();
+                        window.location.href = '/admin';
                     } else {
                         // Handle error
                         console.error('Error deleting post');
