@@ -2,7 +2,7 @@ const express = require('express');
 const server = express();
 const mongoose = require('mongoose');
 const { ObjectId } = require('mongoose').Types;
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 const handlebars = require('express-handlebars');  
 const Handlebars = require('handlebars');
